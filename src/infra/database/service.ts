@@ -12,12 +12,12 @@ export class DatabaseService implements DatabaseUseCase{
         try {
             connect(connection,(err)=>{
                 if(err){
-                    throw Promise.reject(err)
+                    throw err
                 } 
             })
             const response = ResponseHandle.generateReturn(CODE.SUCESS,'Connected to database','DATABASE_CONNECTION_SUCESS',200)
             const responseString = ResponseHandle.generateReturnToString(response)
-            return Promise.resolve(responseString)
+            return responseString
         }catch(err) {
             throw ResponseHandle.generateReturn(CODE.ERROR,'Intern error in process of something of database','DATABASE_ERROR',500,err,ERROR_TYPE.DATABASE_FAILURE_INTERN_PROCESS)
         }
