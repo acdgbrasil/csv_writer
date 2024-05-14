@@ -5,7 +5,6 @@ import 'dotenv/config'
 function createConfig(){
     if(!process.env.DATABASE_USER) throw new Error('DATABASE_USER not found in .env')
     if(!process.env.DATABASE_PASSWORD) throw new Error('DATABASE_USER not found in .env')
-    const db = new DatabaseService()
     MySQLConfigSingleton.getInstance().configureDatabase('localhost', process.env.DATABASE_USER, process.env.DATABASE_PASSWORD)
 }
 
