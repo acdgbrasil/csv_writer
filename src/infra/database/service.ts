@@ -6,8 +6,12 @@ import { MySQLConfigSingleton } from "./mysql/mysqlSingleton";
 import { DatabaseUseCase } from "./useCase/databaseUseCase";
 
 export class DatabaseService implements DatabaseUseCase{
-   
 
+
+    createInternDatabase(connection: any, nameOfDatabase: string) {
+        throw new Error("Method not implemented.");
+    }
+    
     async connect(connection:any): Promise<string| Error> {
         try {
             connect(connection,(err)=>{

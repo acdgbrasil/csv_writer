@@ -2,7 +2,12 @@ import { MySQLConfig } from "../../src/infra/database/mysql/mysql.config"
 import { MySQLConfigSingleton } from "../../src/infra/database/mysql/mysqlSingleton"
 import { DatabaseService } from "../../src/infra/database/service"
 import { Connection } from "mysql"
+import {app} from '../../src/index'
+import request from 'supertest'
 import 'dotenv/config'
+import { ResponseHandle } from "../../src/tools/returnHandle"
+import { CODE } from "../../src/tools/errorEnum"
+import {data} from '../../mock/listOfObject.json'
 
 describe('MYSQL TESTS FOR CREATION AND CONNECTIOS', () => {
     var user: string | undefined
@@ -54,7 +59,20 @@ describe('MYSQL TESTS FOR CREATION AND CONNECTIOS', () => {
         }catch(err){
             expect(err).toBeInstanceOf(Error)
         }
-    })   
+    })
+
+    test('Create a database for List<Objects> SUCESS', async ()=>{
+        //Pegar os dados da API
+        const nameOfArquive = 'table.csv'
+        const response = await request(app)
+        .post('/download/list/objects')
+        .send(ResponseHandle.generateReturn(CODE.SUCESS,'download has been efetuate','SUCESS_DOWNLOAD_TABLE',200))
+        .expect('Content-Disposition', `attachment; filename="${nameOfArquive}"`)
+        .expect(200)
+
+        expect(response.body).toContain(data)
+
+    })
 
     afterAll(()=>{
         db.end()
