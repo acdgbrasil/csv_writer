@@ -1,28 +1,23 @@
 {
-  "name": "project-amn",
-  "version": "1.0.0",
+  "name": "csv_writer",
+  "version": "0.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "npx tsc",
-    "dev": "npx nodemon",
-    "test": "jest"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "@types/express": "^4.17.21",
-    "@types/jest": "^29.5.12",
-    "@types/mysql": "^2.15.26",
-    "@types/node": "^20.8.8",
-    "jest": "^29.7.0",
-    "ts-jest": "^29.1.2",
-    "typescript": "^5.4.5"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/acdgbrasil/csv_writer.git"
   },
+  "author": "ENVOLVE",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/acdgbrasil/csv_writer/issues"
+  },
+  "homepage": "https://github.com/acdgbrasil/csv_writer#readme",
   "dependencies": {
-    "dotenv": "^16.4.5",
-    "express": "^4.19.2",
-    "mysql": "^2.18.1"
+    "excel4node": "^1.8.2",
+    "express": "^4.19.2"
   }
 }
