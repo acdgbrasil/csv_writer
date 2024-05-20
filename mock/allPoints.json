@@ -1,0 +1,84 @@
+{
+    "response":[
+    {
+      "nome": "Ana",
+      "sobrenome": "Silva",
+      "doenca": "Gripe",
+      "dataEntrada": "2023-01-10",
+      "dataSaida": "2023-01-15",
+      "idade": 34
+    },
+    {
+      "nome": "Carlos",
+      "sobrenome": "Pereira",
+      "doenca": "Diabetes",
+      "dataEntrada": "2023-02-20",
+      "dataSaida": "2023-03-01",
+      "idade": 45
+    },
+    {
+      "nome": "Beatriz",
+      "sobrenome": "Oliveira",
+      "doenca": "Hipertensão",
+      "dataEntrada": "2023-03-15",
+      "dataSaida": "2023-03-22",
+      "idade": 52
+    },
+    {
+      "nome": "Eduardo",
+      "sobrenome": "Santos",
+      "doenca": "Covid-19",
+      "dataEntrada": "2023-04-01",
+      "dataSaida": "2023-04-14",
+      "idade": 29
+    },
+    {
+      "nome": "Fernanda",
+      "sobrenome": "Costa",
+      "doenca": "Asma",
+      "dataEntrada": "2023-05-05",
+      "dataSaida": "2023-05-12",
+      "idade": 26
+    },
+    {
+      "nome": "Gabriel",
+      "sobrenome": "Ferreira",
+      "doenca": "Bronquite",
+      "dataEntrada": "2023-06-10",
+      "dataSaida": "2023-06-20",
+      "idade": 37
+    },
+    {
+      "nome": "Helena",
+      "sobrenome": "Martins",
+      "doenca": "Gastrite",
+      "dataEntrada": "2023-07-15",
+      "dataSaida": "2023-07-22",
+      "idade": 31
+    },
+    {
+      "nome": "Igor",
+      "sobrenome": "Almeida",
+      "doenca": "Depressão",
+      "dataEntrada": "2023-08-10",
+      "dataSaida": "2023-08-25",
+      "idade": 24
+    },
+    {
+      "nome": "Juliana",
+      "sobrenome": "Rodrigues",
+      "doenca": "Enxaqueca",
+      "dataEntrada": "2023-09-05",
+      "dataSaida": "2023-09-10",
+      "idade": 28
+    },
+    {
+      "nome": "Lucas",
+      "sobrenome": "Gomes",
+      "doenca": "Alergia",
+      "dataEntrada": "2023-10-01",
+      "dataSaida": "2023-10-07",
+      "idade": 22
+    }
+  ]
+}  
