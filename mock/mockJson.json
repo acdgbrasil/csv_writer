@@ -1,0 +1,21 @@
+[{
+  "ana":{
+    "nome": "João Silva",
+    "idade": 32,
+    "genero": "feminino"
+  }
+},
+{
+  "maria":{
+    "nome": "Paula Silva",
+    "idade": 34,
+    "genero": "masculino"
+  }
+},
+{
+  "carlos":{
+    "nome": "Pedro Sousa",
+    "idade": 30,
+    "genero": "sem genero"
+  }
+}]
