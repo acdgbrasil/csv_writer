@@ -1,6 +1,20 @@
 /**
  * Generates a CSV string from a json file.
  * @param {json} jsonData - The array of objects to convert to CSV.
+ * @example jsonData = [{
+    "ana":{
+        "nome": "João Silva",
+        "idade": 32,
+        "genero": "feminino"
+     }
+    },
+    {
+    "maria":{
+        "nome": "Paula Silva",
+        "idade": 34,
+        "genero": "masculino"
+     }
+    }]
  * @returns [ERROR] {message:'Fail to convert empty array',status:400} - If the array is empty or null.
  * @returns {Promise} A promise that resolves with the generated CSV string.
  */
@@ -9,7 +23,7 @@ export async function generateCsvForJson(jsonData) {
         return { message: 'Fail to convert empty array', status: 400 };
     }
 
-    const data = ['']; //para pular uma celula
+    const data = [''];
     const dataRows = [];
     const firstColumns = [];
     const dataCells = [];
@@ -48,8 +62,8 @@ export async function generateCsvForJson(jsonData) {
         try {
             const csvString = data.join('\n');
             resolve(csvString);
-          } catch (error) {
+        } catch (error) {
             reject(error);
-          }
+        }
     });
 }
