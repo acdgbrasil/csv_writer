@@ -10,7 +10,7 @@ import fs from "fs"
  */
 export async function generateCsvForArrayOfObjects(arrayOfObjects) {
     if(arrayOfObjects === null || arrayOfObjects.length === 0){
-        return {message:'Fail to convert empty array',status:400};
+        throw JSON.stringify({message:'Fail to convert empty array',status:400});
     }
     const headers = Object.keys(arrayOfObjects[0]);
     
@@ -31,6 +31,9 @@ export async function generateCsvForArrayOfObjects(arrayOfObjects) {
  * @returns {Promise<boolean>} A promise that resolves to true if the file was successfully written, or rejects with an error if there was an issue.
  */
 export async function generateCsvFile(csvString, fileName) {
+    if(csvString === null || csvString.length === 0){
+        throw JSON.stringify({message:'FAIL TO CONVERT CSV NULL',status:400});
+    }
     return new Promise((resolve, reject) => {
         fs.writeFile
         (fileName, csvString, (err) => {
