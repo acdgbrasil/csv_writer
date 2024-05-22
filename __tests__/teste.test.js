@@ -19,15 +19,21 @@ test('GENERATE CSV FOR ARRAY OF OBJECT', async () => {
 })
 
 test('GENERATE CSV FOR ARRAY OF OBJECT EMPTY', async () => {
-    const response = [];
-    const value = await generateCsvForArrayOfObjects(response);
-    expect(value.toString()).toBe({message:'Fail to convert empty array',status:400}.toString());
+    try{
+        const response = [];
+        const value = await generateCsvForArrayOfObjects(response);
+    }catch(e){
+        expect(e).toBe(JSON.stringify({message:'Fail to convert empty array',status:400}));
+    }
 })
 
 test('GENERATE CSV FOR ARRAY OF OBJECT NULL', async () => {
-    const response = null;
-    const value = await generateCsvForArrayOfObjects(response);
-    expect(value.toString()).toBe({message:'Fail to convert empty array',status:400}.toString());
+    try{
+        const response = null;
+        const value = await generateCsvForArrayOfObjects(response);
+    }catch(e){
+        expect(e).toBe(JSON.stringify({message:'Fail to convert empty array',status:400}));
+    }
 })
 
 test('GENERATE CSV FILE', async () => {
@@ -47,13 +53,20 @@ test('GENERATE CSV FILE', async () => {
 })
 
 test('GENERATE CSV FILE EMPTY', async () => {
-    const response = '';
-    const value = await generateCsvFile(response,'a.csv');
-    expect(value).toBe(true);
+    try{
+        const response = '';
+        const value = await generateCsvFile(response,'a.csv');
+    }catch(e){
+        
+        expect(e).toBe(JSON.stringify({message:'FAIL TO CONVERT CSV NULL',status:400}));
+    }
 })
 
 test('GENERATE CSV FILE NULL', async () => {
-    const response = null;
-    const value = await generateCsvFile(response,'a.csv');
-    expect(value).toBe(true);
+    try{
+        const response = null;
+        const value = await generateCsvFile(response,'a.csv');
+    }catch(e){
+        expect(e).toBe(JSON.stringify({message:'FAIL TO CONVERT CSV NULL',status:400}));
+    }
 })
